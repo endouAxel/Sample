@@ -4,7 +4,7 @@ import thunkMiddleware from "redux-thunk";
 import TodoReducer from './redux/TodoReducers'
 
 const rootReducer = combineReducers({
-   todo: TodoReducer
+  TodoReducer
 });
 
 const configureStore = (preloadedState = {}) => {
