@@ -9,7 +9,7 @@ const TodoReducer = (state = todos, action) => {
     switch(action.type){
         case ADD_ITEM: 
             newTodos = [...state];
-            newTodos.push(action.payload);
+            newTodos.unshift(action.payload);
             return newTodos;
           
 

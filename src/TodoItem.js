@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { deleteItem, updateItem } from './redux/TodoActions';
-
+import './redux/Todo.css'
 
 const TodoItem = ({ todo }) => {
     const [editable, setEditable] = useState(false)
@@ -48,7 +48,7 @@ const TodoItem = ({ todo }) => {
                         :
                         <h4>{todo.completed}</h4>}
             </td>
-          <td><button onClick={() => {
+          <td><button className="editbtn" onClick={() => {
                         dispatch(updateItem({
                             ...todo,
                             name: name,
@@ -65,7 +65,7 @@ const TodoItem = ({ todo }) => {
 
                     }}
                 >{editable?"Update":"Edit"}</button></td>
-           <td><button onClick={() => dispatch(deleteItem(todo.id))}>Delete</button></td>
+           <td><button className="deletebtn" onClick={() => dispatch(deleteItem(todo.id))}>Delete</button></td>
         </tr>
     )
 }

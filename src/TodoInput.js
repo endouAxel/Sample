@@ -30,7 +30,7 @@ const TodoInput = () => {
                 placeholder="name"/> 
                 <input type="text"  onChange= {(e)=>setMaxTime(e.target.value)} value= {maxTime} placeholder="maximum time"/> 
                 <input type="text"  onChange= {(e)=>setCompleted(e.target.value)} value= {completed} placeholder= "when to be completed"/> 
-                <button onClick={()=>{
+                <button className = "addbtn" onClick={()=>{
                        dispatch(addItem({
                             id: Math.floor(Math.random() * 100),
                             name: name,

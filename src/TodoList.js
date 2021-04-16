@@ -9,10 +9,18 @@ const TodoList = () => {
         <div>
              <table>
                 <tbody>
+                    <tr>
+                        <th></th>
+                        <th>Name of the Todo</th>
+                        <th>Maximum Time</th>
+                        <th>When to be completed</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
                    
-                        {todos.map((todo) => {
-                            return <TodoItem key={todo.id} todo={todo}/>;
-                        })}
+                    {todos.map((todo) => {
+                        return <TodoItem key={todo.id} todo={todo}/>;
+                    })}
                    
                 </tbody>
             </table>

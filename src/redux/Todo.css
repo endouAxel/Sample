@@ -7,7 +7,8 @@ table {
   margin-top: 10px;
 }
 td,
-tr {
+tr,
+th {
   border: 1px solid #000;
   border-collapse: collapse;
   padding: 15px;
@@ -16,7 +17,8 @@ input {
   padding: 15px;
   margin: 10px;
 }
-.editbtn {
+.editbtn,
+.addbtn {
   background: green;
   border: none;
   outline: none;
