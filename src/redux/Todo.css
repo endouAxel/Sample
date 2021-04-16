@@ -1,0 +1,36 @@
+table {
+  text-align: center;
+  margin: auto;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  width: 80%;
+  margin-top: 10px;
+}
+td,
+tr {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 15px;
+}
+input {
+  padding: 15px;
+  margin: 10px;
+}
+.editbtn {
+  background: green;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.deletebtn {
+  background: red;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 8px 12px;
+  font-size: 20px;
+  cursor: pointer;
+}

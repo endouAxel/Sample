@@ -1,8 +1,11 @@
 import { applyMiddleware, combineReducers, createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunkMiddleware from "redux-thunk";
+import TodoReducer from './redux/TodoReducers'
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+   todo: TodoReducer
+});
 
 const configureStore = (preloadedState = {}) => {
   const middleWares = [thunkMiddleware];
