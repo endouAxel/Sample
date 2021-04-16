@@ -11,6 +11,7 @@ const TodoReducer = (state = todos, action) => {
             newTodos = [...state];
             newTodos.push(action.payload);
             return newTodos;
+          
 
         case  UPDATE_ITEM:
             newTodos = [...state];
@@ -32,8 +33,11 @@ const TodoReducer = (state = todos, action) => {
             newTodos = [...state];
             newTodos = newTodos.filter(todo => todo.id !== action.payload);
             return newTodos;
+          
+
+        default : return state
        
     }
-      return state;
+      
 }
 export default  TodoReducer

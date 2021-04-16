@@ -7,9 +7,9 @@ import { useDispatch } from 'react-redux';
 
 
 const TodoInput = () => {
-    const [name, setName] = useState();
-    const [maxTime, setMaxTime] = useState();
-    const [completed , setCompleted] = useState();
+    const [name, setName] = useState([]);
+    const [maxTime, setMaxTime] = useState([]);
+    const [completed , setCompleted] = useState([]);
     let dispatch = useDispatch();
   
 
