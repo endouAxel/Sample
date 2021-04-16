@@ -10,9 +10,12 @@ const TodoInput = () => {
     const [name, setName] = useState([]);
     const [maxTime, setMaxTime] = useState([]);
     const [completed , setCompleted] = useState([]);
+    // const [count, setCount] = useState(0);
     let dispatch = useDispatch();
   
-
+    // const handleCount = () => {
+    //     setCount(count + 1)
+    // }
  
    const handleSubmit = (e) => {
         e.preventDefault();
@@ -29,9 +32,14 @@ const TodoInput = () => {
                 <input type="text"  onChange= {(e)=>setCompleted(e.target.value)} value= {completed} placeholder= "when to be completed"/> 
                 <button onClick={()=>{
                        dispatch(addItem({
-                            name: name
+                            id: Math.floor(Math.random() * 100),
+                            name: name,
+                            maxTime: maxTime,
+                            completed: completed
                     }));
                         setName('');
+                        setMaxTime('');
+                        setCompleted('');
                     }}>ADD</button>
             </form>
            <TodoList />

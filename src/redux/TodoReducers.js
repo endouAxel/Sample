@@ -27,7 +27,7 @@ const TodoReducer = (state = todos, action) => {
                 newTodos[index] = action.payload;
                 return newTodos;
             }
-
+            return newTodos
         
         case DELETE_ITEM: 
             newTodos = [...state];
